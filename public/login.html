@@ -169,15 +169,15 @@
         <div class="login-header">
             <div class="logo-icon">🙏</div>
             <h1>團一起</h1>
-            <p>靈性平台管理系統</p>
+            <p>聯盟計畫後台管理系統</p>
         </div>
 
         <form id="loginForm">
             <div class="error-message" id="errorMessage"></div>
 
             <div class="form-group">
-                <label for="email">電子郵件 / 帳輯</label>
-                <input type="email" id="email" name="email" placeholder="輸入您的郵件或帳輯" required>
+                <label for="email">電子郵件 / 帳號</label>
+                <input type="email" id="email" name="email" placeholder="輸入您的郵件或帳號" required>
             </div>
 
             <div class="form-group">
@@ -193,11 +193,11 @@
                 <a href="#">忘記密碼？</a>
             </div>
 
-            <button type="submit" class="login-btn">登入系統</button>
+            <button type="submit" class="login-btn">登入</button>
         </form>
 
         <div class="demo-section">
-            <strong>📋 測試帳輯：</strong><br>
+            <strong>📋 測試帳號：</strong><br>
             帳輯: admin@teamtogether.com<br>
             密碼: Demo123!
         </div>
@@ -211,7 +211,7 @@
             if (email === 'admin@teamtogether.com' && password === 'Demo123!') {
                 window.location.href = 'dashboard.html';
             } else {
-                document.getElementById('errorMessage').textContent = '❌ 帳輯或密碼不正確';
+                document.getElementById('errorMessage').textContent = '❌ 帳號或密碼不正確';
                 document.getElementById('errorMessage').classList.add('show');
             }
         });
