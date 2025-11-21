@@ -12,7 +12,7 @@
             color: #333;
         }
         header {
-            background: linear-gradient(135deg, #E83015 0%, #00B2B2 100%);
+            background: linear-gradient(135deg, #fdaba8 0%, #E83015 100%);
             color: white;
             padding: 20px 40px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -37,7 +37,7 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
-        .card h2 { color: #E83015; margin-bottom: 15px; font-size: 18px; }
+        .card h2 { color: #00B2B2; margin-bottom: 15px; font-size: 18px; }
         .card p { color: #666; line-height: 1.6; margin-bottom: 10px; }
         .btn {
             display: inline-block;
@@ -50,7 +50,7 @@
             font-size: 14px;
             transition: background 0.3s;
         }
-        .btn:hover { background: #00B2B2; }
+        .btn:hover { background: #E83015; }
         .stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -62,9 +62,9 @@
             padding: 20px;
             border-radius: 8px;
             text-align: center;
-            border-top: 4px solid #E83015;
+            border-top: 4px solid #00B2B2;
         }
-        .stat-box h3 { font-size: 24px; color: #E83015; margin-bottom: 5px; }
+        .stat-box h3 { font-size: 24px; color: #00B2B2; margin-bottom: 5px; }
         .stat-box p { color: #999; font-size: 12px; }
         @media (max-width: 768px) {
             .stats { grid-template-columns: repeat(2, 1fr); }
@@ -74,37 +74,37 @@
             background: white;
             padding: 15px 40px;
             margin-bottom: 20px;
-            border-bottom: 2px solid #E83015;
+            border-bottom: 2px solid #00B2B2;
         }
         nav a {
             margin-right: 20px;
-            color: #E83015;
+            color: #005656;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
         }
-        nav a:hover { color: #00B2B2; }
+        nav a:hover { color: #E83015; }
     </style>
 </head>
 <body>
     <header>
-        <h1>🙋 Team Together Platform</h1>
-        <p>靈性成長社群 - 你的成長夥伴</p>
+        <h1>團一起｜TeamTogether </h1>
+        <p>聯盟計畫 - 過好生活的最佳夥伴</p>
     </header>
     
     <nav>
-        <a href="#dashboard">🃋 Dashboard</a>
-        <a href="#subscription">🎪 会员管理</a>
-        <a href="#affiliate">💵 联䯆专家</a>
-        <a href="#lottery">🎉 抽奉池</a>
-        <a href="#profile">👤 个人中心</a>
+        <a href="#dashboard">🃋 控制台</a>
+        <a href="#subscription">🎪 會員管理</a>
+        <a href="#affiliate">💵 聯盟夥伴</a>
+        <a href="#lottery">🎉 獎金池</a>
+        <a href="#profile">👤 個人資料</a>
     </nav>
     
     <div class="container">
         <div class="stats">
             <div class="stat-box">
                 <h3>1,234</h3>
-                <p>总用户</p>
+                <p>總用户</p>
             </div>
             <div class="stat-box">
                 <h3>NT$567K</h3>
@@ -112,55 +112,55 @@
             </div>
             <div class="stat-box">
                 <h3>89</h3>
-                <p>活跃联䯆</p>
+                <p>活躍用戶</p>
             </div>
             <div class="stat-box">
                 <h3>12</h3>
-                <p>次抽奉</p>
+                <p>次抽獎機會</p>
             </div>
         </div>
         
         <div class="dashboard-grid">
             <div class="card" id="dashboard">
-                <h2>🃋 Dashboard</h2>
-                <p>查看平台统计数据、销决状况、用户信息</p>
-                <button class="btn" onclick="alert('功能正在开发中')">进入 Dashboard</button>
+                <h2>🃋 聯盟計畫控制台</h2>
+                <p>查看平台統計資料、銷貨狀況、使用者資訊</p>
+                <button class="btn" onclick="alert('功能正在開發中')">進入 Dashboard</button>
             </div>
             
             <div class="card" id="subscription">
-                <h2>🎪 会员管理</h2>
-                <p>管理 4 个会员级别（迎接㔂89/创造㔂89/累積㔂89/传承㔂89）</p>
-                <button class="btn" onclick="alert('欣迎你设置会员级别')">管理会员</button>
+                <h2>🎪 會員管理</h2>
+                <p>管理 4 個會員級別（迎接豐盛89/創造富足89/累積福報89/傳承幸福89）</p>
+                <button class="btn" onclick="alert('歡迎設置會員級別')">管理會員</button>
             </div>
             
             <div class="card" id="affiliate">
-                <h2>💵 联䯆专家</h2>
-                <p>追踪推荐企业家，计算提成（产吘10%/服务5%/课程12%）</p>
-                <button class="btn" onclick="alert('欣迎查看联䯆收入')">联䯆专家</button>
+                <h2>💵 聯盟夥伴</h2>
+                <p>追蹤推薦的聯盟夥伴，計算推廣獎金</p>
+                <button class="btn" onclick="alert('歡迎查看聯盟收入')">聯盟獎金</button>
             </div>
             
             <div class="card" id="lottery">
-                <h2>🎉 抽奉池</h2>
-                <p>金餔超过截满值时执行抽奉，一等加为冓10%税收</p>
-                <button class="btn" onclick="alert('欣迎查看抽奉信息')">抽奉池</button>
+                <h2>🎉 現金抽獎</h2>
+                <p>當總營業額達標時，啟動獎金池，當獎金品項超過2萬則會預扣10%稅金</p>
+                <button class="btn" onclick="alert('歡迎查看抽獎資訊')">獎金池</button>
             </div>
             
             <div class="card">
-                <h2>📄 收入报告</h2>
-                <p>子下载吕织收入报告（Excel/PDF）</p>
-                <button class="btn" onclick="alert('欣迎下载报告')">下载报告</button>
+                <h2>📄 收入明細</h2>
+                <p>下載（Excel/PDF）</p>
+                <button class="btn" onclick="alert('歡迎下載自己的收入明細')">下載明細</button>
             </div>
             
             <div class="card">
-                <h2>📂 LINE 机器人</h2>
-                <p>配置 LINE Bot 争取、彩籹提醒、订单提醒</p>
-                <button class="btn" onclick="alert('LINE Bot 配置欣迎开发')">配置 Bot</button>
+                <h2>📂 LINE Bot</h2>
+                <p>設定 LINE Bot 功能</p>
+                <button class="btn" onclick="alert('LINE Bot 歡迎開發')">設定</button>
             </div>
             
             <div class="card" id="profile">
-                <h2>👤 个人中心</h2>
-                <p>修改个人信息、密码、LINE ID</p>
-                <button class="btn" onclick="alert('个人中心配置欣迎开发')">管理配置</button>
+                <h2>👤 個人資料</h2>
+                <p>修改個人資訊、密碼、收款帳戶</p>
+                <button class="btn" onclick="alert('個人資料管理')">修改資料</button>
             </div>
         </div>
     </div>
