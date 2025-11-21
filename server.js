@@ -623,6 +623,41 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date() });
 });
 
+// Test endpoint - Send test message to Koayu via LINE
+app.post('/test/send-message', async (req, res) => {
+    try {
+          const channelAccessToken = process.env.LINE_CHANNEL_ACCESS_TOKEN;
+          const userId = 'U7c6d5b71474157906518b878e7104224'; // Koayu's User ID
+          if (!channelAccessToken) {
+                  return res.status(500).json({ error: 'LINE_CHANNEL_ACCESS_TOKEN not configured' });
+                }
+
+          const testMessage = {
+                  type: 'text',
+                  text: `🌟 團一起 LINE Bot 測試訊息\n\n親愛的 Koayu，\n\n✨ 我們的靈性平台已正式啟動！\n📱 你現在可以透過這個 Bot 與我們連接\n\n💫 功能預告：\n• 每日運勢占卜 (早上7點)\n• 睡前冥想提醒 (晚上9點)\n• 服務預約通知\n• 專業顧問聯繫\n\n祝福滿滿，期待為你服務！\n🙏 團一起`
+                        };
+
+          const url = 'https://api.line.me/v2/bot/message/push';
+          const response = await axios.post(url, {
+                  to: userId,
+                  messages: [testMessage]
+                        }, {Return      headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${channelAccessToken}`
+                            }
+                });
+
+          res.json({
+                  success: true,
+                  message: 'Test message sent to Koayu successfully',
+                  userId: userId
+                        });
+        } catch (err) {
+          console.error('Error sending test message:', err.message);
+          res.status(500).json({ error: err.message });
+        }
+  });
+
 // Start Server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
